@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useEffect, useState } from "react";
 import calculatePasswordStrength from "@/utils/crackTime";
-import { ZxcvbnResult } from "@zxcvbn-ts/core";
+import { zxcvbn, ZxcvbnResult } from "@zxcvbn-ts/core";
 
 const HomePage = () => {
 
@@ -38,8 +38,9 @@ const HomePage = () => {
         hasSymbol = passwordSequence.some((seq) => /[!@#$%^&*(),.?":{}|<>]/.test(seq.token));
         hasNumber = passwordSequence.some((seq) => /[0-9]/.test(seq.token));
     }
+
     const colorBarStyle = {
-        width: `${Math.round(result?.score / 5 * 100)}%`,
+          width: `${result && Math.round(result.score / 5 * 100)}%`,
         height: '10px',
         backgroundColor: passwordStrengthColor,
         borderRadius: '6px',
