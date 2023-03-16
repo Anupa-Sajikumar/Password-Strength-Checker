@@ -1,0 +1,32 @@
+{
+  "name": "password-checker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "18.14.1",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@zxcvbn-ts/core": "^2.2.1",
+    "@zxcvbn-ts/language-common": "^2.0.1",
+    "@zxcvbn-ts/language-en": "^2.1.0",
+    "@zxcvbn-ts/matcher-pwned": "^2.0.9",
+    "autoprefixer": "^10.4.14",
+    "chaya-ui": "^1.0.0-beta.10",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.1",
+    "next": "13.2.1",
+    "postcss": "^8.4.21",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
